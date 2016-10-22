@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MIUI官方论坛</title>
+	<meta charset="utf-8">
+	<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+      <style type="text/css">
+      html,body{
+      	width: 1500px;
+        height: 100%;        
+    }
+     html,body{
+     	min-width: 1400px;
+     }
+    .header{
+    	width: 100%;
+    	height: 170px;
+    }
+    .header .line1{
+    	width: 1500px;
+        height: 100px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .header .line1 img{
+    	width: 150px;
+    	height: 100px;
+    	margin-right: 20px;
+    }
+    .header .line1 .app{
+    	width: 54px;
+    	height: 21px;
+    	border-radius: 9%;
+    	border: rgb(252, 112, 80) 2px solid;
+    	color: rgb(252, 112, 80);
+    	font-size: 14px;
+    	text-align: center;
+    	position: relative;
+    	top: -47px;
+    }
+    .header .line1 .put{
+    	width: 290px;
+    	height: 80px;
+    	float: right;
+    	margin-left: 420px;
+    }
+    .header .line1 .put p a{
+    	color: #ccc;
+    	font-size: 14px;
+    }
+    .header .line1 .put p a:hover{
+    	color: rgb(252, 112, 80);
+    }
+    .header .line1 .put .btn{
+    	width: 290px;
+    	height: 24px;
+    	border: rgb(252, 112, 80) 2px solid;
+    	border-radius: 3%;
+    	outline: none;
+    	padding: 10px; 
+    } 
+    .header .line2{
+    	width: 1500px;
+    	height: 50px;
+    	margin: 0 auto;
+    	background-color: rgb(252, 112, 80);
+    	color: #fff;
+    }
+    .line2-fixed{
+    	position: fixed;
+    	top: 0px;
+    }
+    .header .line2 ul li a{
+    	display: block;
+    	color: #fff;
+    	text-decoration: none;
+    	background: rgb(252, 112, 80);
+    	text-align: center;
+    	line-height: 30px;
+    	padding: 10px 16px;
+    }
+    .header .line2 ul{
+    	padding: 0px;
+    	margin: 0 auto;
+    	text-align: center;
+    }
+    .header .line2 ul li{
+    	list-style-type: none;
+    	display: inline-block;
+        font-size: 16px;
+        text-align: center;
+    } 
+    .header .line2 ul li a:hover{
+        background: rgb(240, 0, 0);
+    }
+    .erweima{
+        width: 190px;
+        height: 200px;
+        border: 1px rgb(252, 112, 80) solid;
+        background-color: #fff;
+        position: absolute;
+        top: 73px;
+        left: 350px;
+        
+    }
+    .erweima img{
+    	width: 159px;
+    	height: 159px;
+    	padding: 11px 11px;
+    	margin: 0 auto;
+    }
+    .erweima div{
+    	width: 159px;
+    	height: 20px;
+    	color: rgb(252, 112, 80);
+    	font-size: 16px;
+    	margin: 0 auto;
+    	text-align: center;
+    }
+    .content{
+    	width: 1100px;
+    	height: 2200px;
+    	margin: 0 auto;
+    }
+    .content .left{
+    	background-color: #fff;
+    	width: 680px;
+    	height: 2000px;
+    }
+    .content .left .left1{
+    	width: 680px;
+    	height: 50px;
+    	border: #d1d1d1 1px solid;
+    	margin-bottom: 10px;
+    	border-radius: 1%;
+    	margin-top: 10px;
+    }
+    .content .left .left2{
+    	width: 680px;
+    	height: 1800px;
+    	border: #d1d1d1 1px solid;
+    	border-radius: 1%;
+    	margin-top: 20px;
+    }
+    .content .right .right1{
+    	background-color: rgb(252, 112, 80);
+        display: block;
+    	color: #fff;
+    	text-decoration: none;
+    	background: rgb(252, 112, 80);
+    	text-align: center;
+    	height: 50px;
+    	width: 250px;
+    	padding-top: 25px;
+    	margin-left: 30px;
+    	margin-top:15px;
+    	border-radius: 2%;
+    	font-size: 25px; 
+
+    }
+    .content .right .right2{
+    	width: 250px;
+    	height: 315px;
+    	border: #d1d1d1 1px solid;
+    	border-radius: 2%;
+    	margin-left: 30px;
+    	margin-top:15px;
+    	background-color: #fff;
+    	-webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;	
+    }
+    .content .right .right3{
+    	width: 250px;
+    	height: 110px;
+    	border: #d1d1d1 1px solid;
+    	border-radius: 2%;
+    	margin-left: 30px;
+    	margin-top:15px;
+    	display: inline-block;
+    }
+    .content .right .right4{
+    	width: 250px;
+    	height: 390px;
+    	border: #d1d1d1 1px solid;
+    	border-radius: 2%;
+    	margin-left: 30px;
+    	margin-top:15px;
+    }
+    .content .right .right5{
+    	width: 250px;
+    	height: 390px;
+    	border: #d1d1d1 1px solid;
+    	border-radius: 2%;
+    	margin-left: 30px;
+    	margin-top:15px;
+    }
+    .content .right .right6{
+    	width: 250px;
+    	height: 390px;
+    	border: #d1d1d1 1px solid;
+    	border-radius: 2%;
+    	margin-left: 30px;
+    	margin-top:15px;
+    }
+    .content .right .right7{
+    	width: 250px;
+    	height: 390px;
+    	border: #d1d1d1 1px solid;
+    	border-radius: 2%;
+    	margin-left: 30px;
+    	margin-top:15px;
+    }
+    .content .right .right8{
+    	width: 250px;
+    	height: 390px;
+    	border: #d1d1d1 1px solid;
+    	border-radius: 2%;
+    	margin-left: 30px;
+    	margin-top:15px;
+    }
+    .right2 a{
+    	width: 250px;
+    	height: 55px;
+    	font-size: 30px;
+    	color: #444;
+    	background-image: url('http://static.bbs.miui.com/static/image/miui/base/sel_phone_bg.png');
+    	padding: 10px 10px;
+    	margin-bottom: 20px;
+    	text-decoration: none;
+    	text-align: center;
+
+    }
+    .right2 img{
+    	width: 250px;
+
+    }
+      </style>
+      <script>
+      window.onscroll = function () {
+      	var pos = document.documentElement.scrollTop || document.body.scrollTop;
+      	var body_height = document.body.clientHeight;
+      	if (pos >=body_height){
+      		$('.line2').addClass('.line2-fixed');
+      	}
+      	else {
+      		$('.line2').removeClass('.line2-fixed')
+      	}
+      }
+      	$(document).ready(function() {
+      		$('.app').mouseover(function(event) {
+      			/* Act on the event */
+      			$('.erweima').show();
+      		});
+            $('.app').mouseout(function(event) {
+            	/* Act on the event */
+            	$('.erweima').hide();
+            });
+      	})
+
+      </script>
+    
+</head>
+<body>
+<div class="header">
+<div class="line1">
+<img style="display: inline-block;" src="http://static.bbs.miui.com/static/image/miui/base/logo.png">
+<div style="display: inline-block;" class="app">下载APP	</div> 	
+<div style="display: inline-block;" class="put">
+<p style="float: right;"><a style="display: inline-block;margin-right: 20px;" href="#">登录</a><a href="#">MIUI官网</a></p>
+<input class="btn" type="text" placeholder="搜素"></input>
+</div>
+</div>
+<div class="line2">
+<ul>
+	<li><a href="#" style="width: 35px;">首页</a></li>
+	<li><a href="#" style="width: 35px;">新帖</a></li>
+	<li><a href="#" style="width: 35px;">版块</a></li>
+	<li><a href="#" style="width: 60px;">MIUI专区</a></li>
+	<li><a href="#" style="width: 56px;">资源分享</a></li>
+	<li><a href="#" style="width: 56px;">谈天说地</a></li>
+	<li><a href="#" style="width: 42px;">俱乐部</a></li>
+	<li><a href="#" style="width: 42px;">极客秀</a></li>
+	<li><a href="#" style="width: 60px;">MIUI下载</a></li>
+	<li><a href="#" style="width: 56px;">四格报告</a></li>
+	<li><a href="#" style="width: 55px;">论坛APP</a></li>
+</ul>
+</div>	
+</div>
+<div class="erweima" style="display: none;">
+<img src="http://www.miui.com/static/image/miui/base/app_QRCode.png">
+<div>扫描下载MIUI论坛APP</div>
+</div>
+<div class="content">
+<div class="left" style="float: left;">
+	<div class="left1">
+	
+	</div>
+	<div class="left2">
+		
+	</div>
+	<div class="left3">
+		
+	</div>
+</div>
+<div class="right" style="float: right;">
+<a style="display: block;" class="right1" href="#"><b>发表新帖</b></a>
+<div class="right2">
+<h><strong>设置机型</strong></h>
+<a href="#" style="display: block;margin-top: 15px;">请选择手机品牌</a>
+<a href="#" style="display: block;">请选择手机型号</a>
+<img src="http://static.bbs.miui.com/static/image/miui/base/set_phone_okbtn.jpg">
+</div>
+<div class="right3"> </div>
+<div class="right4"> </div>
+<div class="right5"> </div>
+<div class="right6"> </div>
+<div class="right7"> </div>
+<div class="right8"> </div>	
+<div class="right9"> </div>	
+</div>
+	
+</div>
+
+</body>
+</html>
