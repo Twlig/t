@@ -361,6 +361,54 @@
                     </li>
                 </ul>
             </div>
+            <div id="line2">
+              <ul>
+                 <li><a href="#">首页</a></li>
+                 <li><a href="#">新帖</a></li>
+                 <li><a href="#">版块</a></li>
+                 <li><a href="#">MIUI专区</a></li>
+                 <li><a href="#">资源分享</a></li>
+                 <li><a href="#">谈天说地</a></li>
+                 <li><a href="#">俱乐部</a></li>
+                 <li><a href="#">极客秀</a></li>
+                 <li><a href="#">MIUI下载</a></li>
+                 <li><a href="#">四格报告</a></li>
+                 <li><a href="#">论坛APP</a></li>
+                 <li><a href="#"></a></li>
+             </ul>
+          </div>
+          <div id="fixed">
+             <a class="right1" href="#">发表新帖</a>  
+               <div class="right2">
+                <a href="#"><img src="img/daka.png"></a> 
+               </div>
+               <div class="right3">
+                  <p>
+                      MIUI已持续更新306周
+                  </p>
+                  <p>
+                     <a href="#"> 最新版本：6.10.20</a>
+                  </p> 
+                  <a class="rom" href="#">ROM下载</a>
+                  <a class="shua" href="#">刷机教程</a>
+               </div>
+               <div class="right4">
+               <h2>推荐版块</h2>
+               <ul>                                             <li><a href="#">小米5s</a></li>
+                    <li><a href="#">小米5s plus</a></li>
+                    <li><a href="#">小米手机4</a></li>
+                    <li><a href="#">小米笔记本</a></li>
+                    <li><a href="#">小米手机5</a></li>
+                    <li><a href="#">小米Mas</a></li>
+                    <li><a href="#">贴图自拍</a></li>
+                    <li><a href="#">汉化资源</a></li>
+                    <li><a href="#">新功能讨论</a></li>
+                    <li><a href="#">特殊组申请</a></li>
+               </ul>
+               <p><a href="#">所有版权<</a></p>
+               </div> 
+               <a class="back" href="#top"><</a>  
+          </div>  
     </body>
     <script type="text/javascript">
         var count=1;
@@ -379,7 +427,7 @@
         $('.app').mouseenter(function(event) {
           $('.erweima').show();       
             });
-        $('.erweima').mouseleave(function(event) {
+        $('.app').mouseleave(function(event) {
             /* Act on the event */
             $('.erweima').hide();
         });
@@ -392,5 +440,33 @@
             $('.guanwang').hide();
         });
         }); 
+    </script>
+    <script>
+        $(function(){
+            var m_st, m_po =200; //滚动到600像素时显示
+            $(window).scroll(
+                function () {
+                    m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+                    if (m_st > m_po) {
+                        $('#line2').slideDown();//classNmae : tips
+                    }else{
+                        $('#line2').slideUp();//classNmae : tips
+                    }
+                })           
+        });
+    </script>
+    <script type="text/javascript">
+         $(function(){
+            var m_st, m_po =2050; //滚动到600像素时显示
+            $(window).scroll(
+                function () {
+                    m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+                    if (m_st > m_po) {
+                        $('#fixed').slideDown();//classNmae : tips
+                    }else{
+                        $('#fixed').slideUp();//classNmae : tips
+                    }
+                })           
+        });
     </script>
     </html>
